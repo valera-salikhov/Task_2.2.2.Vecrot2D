@@ -24,4 +24,26 @@ public class Vector2D {
         System.out.println("(" + String.format(Locale.US, "%.2f, %.2f", this.vX, this.vY) + ")");
     }
 
+    public double length() {
+        return Math.sqrt(vX * vX + vY * vY);
+    }
+
+    public Vector2D add(Vector2D v) {
+        this.vX += v.vX;
+        this.vY += v.vY;
+        return this;
+    }
+
+    public Vector2D sub(Vector2D v) {
+        this.vX -= v.vX;
+        this.vY -= v.vY;
+        return this;
+    }
+
+    public Vector2D scale(double scaleFactor) {
+        this.vX *= scaleFactor;
+        this.vY *= scaleFactor;
+        return this;
+    }
+
 }
